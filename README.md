@@ -1,6 +1,6 @@
 # react-file-uploader
 
-A customised file uploader component for make your life easier with file upload in a React project.
+A customised file uploader component for making your life easier with file upload in a React project.
 
 ### Installation
 
