@@ -48,12 +48,12 @@ export default App;
 ### File Uploader
 | Name | Type | Default | Required |
 | --- | --- | --- | --- |
-| inputRef | ref | - | - |
+| inputRef | ref | `null` | - |
 | accept | string | `.png, .jpeg, .gif, .jpg` | true |
 | multiple | bool | `false` | - |
-| maxSizeMB | number | - | - |
-| onChange | func | - | true |
-| onError | func | - | - |
+| maxSizeMB | number | `null` | - |
+| onChange | func | `null` | true |
+| onError | func | `null` | - |
 | isHidden | bool | `true` | - |
 
 ### File Upload Button
