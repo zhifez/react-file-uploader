@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+import './App.css';
+import { FileUploadButton } from './components/react-file-uploader/react-file-uploader';
+
+const App = () => {
+  let [ files, onUploadFiles ] = useState ( [] );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <FileUploadButton 
+        label="Upload PDF file (Max size: 5MB)"
+        maxSizeMB={5}
+        onChange={files => {
+          onUploadFiles ( files );
+        }}
+        onError={err => {
+          console.warn ( err );
+        }}
+        accept={'.pdf'}
+        multiple={true}
+      />
+      <br />
+      {files && files.map ( ( file, index ) => {
+        return ( 
+          <p key={index}>File {index} - {file.name}</p>
+        );
+      } )}
     </div>
   );
 }

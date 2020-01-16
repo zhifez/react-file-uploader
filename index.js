@@ -1,0 +1,1 @@
+module.exports = require ( './dist/react-file-uploader/react-file-uploader' );

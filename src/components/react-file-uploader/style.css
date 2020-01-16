@@ -1,0 +1,11 @@
+.fileUploaderButton {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.fileUploaderButton:hover {
+  background-color: slateblue;
+  color: white;
+}
