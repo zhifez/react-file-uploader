@@ -48,17 +48,17 @@ export default App;
 ### File Uploader
 | Name | Type | Default | Required |
 | --- | --- | --- | --- |
-| inputRef | ref | `null` |  |
+| inputRef | ref | - | - |
 | accept | string | `.png, .jpeg, .gif, .jpg` | true |
-| multiple | bool | `false` |  |
-| maxSizeMB | number | `null` |  |
-| onChange | func |  | true |
-| onError | func |  |  |
-| isHidden | bool | `true` |  |
+| multiple | bool | `false` | - |
+| maxSizeMB | number | - | - |
+| onChange | func | - | true |
+| onError | func | - | - |
+| isHidden | bool | `true` | - |
 
 ### File Upload Button
 | Name | Type | Default | Required |
 | --- | --- | --- | --- |
-| className | string/object | `.fileUploaderButton` |  |
-| style | object | `null` |  |
-| label | object | `Upload File` |  |
+| className | string/object | `.fileUploaderButton` | - |
+| style | object | `null` | - |
+| label | object | `Upload File` | - |
