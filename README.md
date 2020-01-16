@@ -42,3 +42,23 @@ const App = () => {
 
 export default App;
 ```
+
+## Props
+
+### File Uploader
+| Name | Type | Default | Required |
+| --- | --- | --- | --- |
+| inputRef | ref | `null` | false |
+| accept | string | `.png, .jpeg, .gif, .jpg` | true |
+| multiple | bool | `false` | false |
+| maxSizeMB | number | `null` | false |
+| onChange | func | `` | true |
+| onError | func | `` | false |
+| isHidden | bool | `true` | false |
+
+### File Upload Button
+| Name | Type | Default | Required |
+| --- | --- | --- | --- |
+| className | string/object | `.fileUploaderButton` | false |
+| style | object | `null` | false |
+| label | object | `Upload File` | false |
