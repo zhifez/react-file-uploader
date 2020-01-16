@@ -4,7 +4,7 @@ A customised file uploader component for making your life easier with file uploa
 
 ### Installation
 
-Add react-file-uploader to your project by executing `npm install react-file-uploader` or `yarn add react-file-uploader`.
+Add react-file-uploader to your project by executing `npm install @zhifez/react-file-uploader` or `yarn add @zhifez/react-file-uploader`.
 
 ### Usage
 
