@@ -92,7 +92,10 @@ export const FileUploader = ( {
 }
 
 FileUploadButton.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.oneOfType ( [
+    PropTypes.string,
+    PropTypes.element
+  ] ),
   accept: PropTypes.string.isRequired,
   multiple: PropTypes.bool,
   maxSizeMB: PropTypes.number,
