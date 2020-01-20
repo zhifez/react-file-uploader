@@ -110,7 +110,7 @@ var FileUploader = function FileUploader(_ref2) {
 
 exports.FileUploader = FileUploader;
 FileUploadButton.propTypes = {
-  label: _propTypes.default.string,
+  label: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.element]),
   accept: _propTypes.default.string.isRequired,
   multiple: _propTypes.default.bool,
   maxSizeMB: _propTypes.default.number,
