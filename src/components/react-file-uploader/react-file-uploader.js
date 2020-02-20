@@ -66,8 +66,8 @@ export const FileUploader = ( {
       reader.onerror = err => {
         return callback ( err );
       }
-      reader.onloadend = () => {
-        uploadedFiles.push ( file );
+      reader.onloadend = ( e ) => {
+        uploadedFiles.push ( e.target.result );
         callback ();
       }
     }, ( err ) => {
