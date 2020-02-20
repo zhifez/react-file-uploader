@@ -86,7 +86,7 @@ var FileUploader = function FileUploader(_ref2) {
       };
 
       reader.onloadend = function (e) {
-        uploadedFiles.push(e.target.result);
+        if (readAsBinary) uploadedFiles.push(e.target.result);else uploadedFiles.push(file);
         callback();
       };
     }, function (err) {

@@ -67,7 +67,10 @@ export const FileUploader = ( {
         return callback ( err );
       }
       reader.onloadend = ( e ) => {
-        uploadedFiles.push ( e.target.result );
+        if ( readAsBinary )
+          uploadedFiles.push ( e.target.result );
+        else
+          uploadedFiles.push ( file );
         callback ();
       }
     }, ( err ) => {
