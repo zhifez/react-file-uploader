@@ -85,8 +85,8 @@ var FileUploader = function FileUploader(_ref2) {
         return callback(err);
       };
 
-      reader.onloadend = function () {
-        uploadedFiles.push(file);
+      reader.onloadend = function (e) {
+        uploadedFiles.push(e.target.result);
         callback();
       };
     }, function (err) {
