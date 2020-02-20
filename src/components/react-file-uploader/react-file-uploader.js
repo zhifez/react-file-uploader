@@ -41,6 +41,7 @@ export const FileUploader = ( {
   inputRef,
   accept = '.png, .jpeg, .gif, .jpg',
   multiple = false,
+  readAsBinary = false,
   maxSizeMB, // number
   onChange,
   onError,
@@ -58,7 +59,10 @@ export const FileUploader = ( {
       }
 
       let reader = new FileReader ();
-      reader.readAsDataURL ( file );
+      if ( readAsBinary )
+        reader.readAsBinaryString ( file );
+      else
+        reader.readAsDataURL ( file );
       reader.onerror = err => {
         return callback ( err );
       }
@@ -106,7 +110,8 @@ FileUploadButton.propTypes = {
 
 FileUploader.propTypes = {
   accept: PropTypes.string,
-  multiple: PropTypes.bool.isRequired,
+  multiple: PropTypes.bool,
+  readAsBinary: PropTypes.bool,
   maxSizeMB: PropTypes.number,
   onChange: PropTypes.func.isRequired,
   onError: PropTypes.func,
