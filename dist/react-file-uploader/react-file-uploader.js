@@ -60,6 +60,8 @@ var FileUploader = function FileUploader(_ref2) {
       accept = _ref2$accept === void 0 ? '.png, .jpeg, .gif, .jpg' : _ref2$accept,
       _ref2$multiple = _ref2.multiple,
       multiple = _ref2$multiple === void 0 ? false : _ref2$multiple,
+      _ref2$readAsBinary = _ref2.readAsBinary,
+      readAsBinary = _ref2$readAsBinary === void 0 ? false : _ref2$readAsBinary,
       maxSizeMB = _ref2.maxSizeMB,
       onChange = _ref2.onChange,
       onError = _ref2.onError,
@@ -77,7 +79,7 @@ var FileUploader = function FileUploader(_ref2) {
       }
 
       var reader = new FileReader();
-      reader.readAsDataURL(file);
+      if (readAsBinary) reader.readAsBinaryString(file);else reader.readAsDataURL(file);
 
       reader.onerror = function (err) {
         return callback(err);
@@ -120,7 +122,8 @@ FileUploadButton.propTypes = {
 };
 FileUploader.propTypes = {
   accept: _propTypes.default.string,
-  multiple: _propTypes.default.bool.isRequired,
+  multiple: _propTypes.default.bool,
+  readAsBinary: _propTypes.default.bool,
   maxSizeMB: _propTypes.default.number,
   onChange: _propTypes.default.func.isRequired,
   onError: _propTypes.default.func,
