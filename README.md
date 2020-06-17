@@ -12,7 +12,7 @@ Add react-file-uploader to your project by executing `npm install @zhifez/react-
 import React, { useState } from 'react';
 
 import './App.css';
-import { FileUploadButton } from './components/react-file-uploader/react-file-uploader';
+import { FileUploadButton } from '@zhifez/react-file-uploader';
 
 const App = () => {
   let [ files, onUploadFiles ] = useState ( [] );
